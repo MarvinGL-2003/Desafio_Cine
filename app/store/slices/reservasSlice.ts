@@ -22,6 +22,9 @@ const reservasSlice = createSlice({
 
     cancelarReserva: (state, action: PayloadAction<string>) => {
       state.reservas = state.reservas.filter(r => r.id !== action.payload);
+      if (state.ultimaReserva?.id === action.payload) {
+        state.ultimaReserva = null;
+      }
     },
 
     limpiarUltimaReserva: (state) => {
