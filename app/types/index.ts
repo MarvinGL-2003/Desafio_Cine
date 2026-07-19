@@ -34,30 +34,18 @@ export interface Asiento {
 export interface Reserva {
   id: string;
   peliculaId: string;
-  funcionId?: string;
+  funcionId: string;
   sala: string;
   asientosIds: string[];
   total: number;
   fecha: string;
+  usuarioNombre: string;
+  destinatario: string;
   cantidadBoletos?: number;
-  usuarioId: string;          
-  usuarioNombre: string;      
-  destinatario: string;       
 }
 
 // --------------------------------------------------
-// 4. FUNCIÓN
-// --------------------------------------------------
-export interface Funcion {
-  id: string;
-  peliculaId: string;
-  sala: string;
-  horario: string;
-  fecha: string;
-}
-
-// --------------------------------------------------
-// 5. USUARIO
+// 4. USUARIO
 // --------------------------------------------------
 export interface Usuario {
   id: string;

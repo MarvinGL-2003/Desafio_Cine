@@ -3,8 +3,6 @@ import peliculasReducer from './slices/peliculasSlice';
 import asientosReducer from './slices/asientosSlice';
 import reservasReducer from './slices/reservasSlice';
 import usuariosReducer from './slices/usuariosSlice';
-<<<<<<< HEAD
-=======
 import funcionesReducer from './slices/funcionesSlice';
 
 // --------------------------------------------------
@@ -33,7 +31,7 @@ const loadState = () => {
 };
 
 const preloadedState = loadState();
->>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
+
 
 // --------------------------------------------------
 // CONFIGURAR EL STORE
@@ -44,10 +42,8 @@ export const store = configureStore({
     asientos: asientosReducer,
     reservas: reservasReducer,
     usuarios: usuariosReducer,
-<<<<<<< HEAD
-=======
     funciones: funcionesReducer,
->>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
+
   },
 });
 

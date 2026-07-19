@@ -31,10 +31,9 @@ export function AppShell({
             <Link href="/dashboard">📊 Dashboard</Link>
             <Link href="/peliculas">🎬 Películas</Link>
             <Link href="/reservas">🎫 Reservas</Link>
-<<<<<<< HEAD
-=======
+
             <Link href="/historial">📋 Historial</Link> 
->>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
+
           </div>
         </div>
       </nav>
