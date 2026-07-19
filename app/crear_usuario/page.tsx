@@ -30,6 +30,10 @@ export default function CrearUsuarioPage() {
 
   const [error, setError] = useState('');
   const [mensaje, setMensaje] = useState('');
+<<<<<<< HEAD
+=======
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -106,6 +110,11 @@ export default function CrearUsuarioPage() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+    setIsLoading(true);
+
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
     dispatch(
       agregarUsuario({
         id: crypto.randomUUID(),
@@ -116,7 +125,11 @@ export default function CrearUsuarioPage() {
       })
     );
 
+<<<<<<< HEAD
     setMensaje('Usuario creado correctamente.');
+=======
+    setMensaje('✅ Usuario creado correctamente.');
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
     setTimeout(() => {
       router.push('/loggin');
@@ -124,6 +137,7 @@ export default function CrearUsuarioPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div style={styles.pagina}>
       <div style={styles.decoracionUno} />
       <div style={styles.decoracionDos} />
@@ -137,6 +151,21 @@ export default function CrearUsuarioPage() {
           </h1>
 
           <p style={styles.subtitulo}>
+=======
+    <div className="crear-usuario-page">
+      <div className="crear-usuario-decoracion-uno" />
+      <div className="crear-usuario-decoracion-dos" />
+
+      <div className="crear-usuario-tarjeta">
+        <div className="crear-usuario-encabezado">
+          <div className="crear-usuario-icono">🎬</div>
+
+          <h1 className="crear-usuario-titulo">
+            Crear usuario
+          </h1>
+
+          <p className="crear-usuario-subtitulo">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             Regístrate para comenzar a utilizar Cine App
           </p>
         </div>
@@ -144,6 +173,7 @@ export default function CrearUsuarioPage() {
         <form
           onSubmit={crearUsuario}
           noValidate
+<<<<<<< HEAD
           style={styles.formulario}
         >
           <div style={styles.fila}>
@@ -151,12 +181,26 @@ export default function CrearUsuarioPage() {
               <label
                 htmlFor="nombre"
                 style={styles.label}
+=======
+          className="crear-usuario-form"
+        >
+          <div className="crear-usuario-row">
+            <div className="crear-usuario-group">
+              <label
+                htmlFor="nombre"
+                className="crear-usuario-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Nombre completo
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>👤</span>
+=======
+              <div className="crear-usuario-input-icono">
+                <span>👤</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="nombre"
@@ -165,21 +209,37 @@ export default function CrearUsuarioPage() {
                   placeholder="Ingrese su nombre"
                   value={formulario.nombre}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="crear-usuario-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
 
+<<<<<<< HEAD
             <div style={styles.grupo}>
               <label
                 htmlFor="correo"
                 style={styles.label}
+=======
+            <div className="crear-usuario-group">
+              <label
+                htmlFor="correo"
+                className="crear-usuario-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Correo electrónico
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>✉️</span>
+=======
+              <div className="crear-usuario-input-icono">
+                <span>✉️</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="correo"
@@ -188,22 +248,38 @@ export default function CrearUsuarioPage() {
                   placeholder="ejemplo@correo.com"
                   value={formulario.correo}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="crear-usuario-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
           </div>
 
+<<<<<<< HEAD
           <div style={styles.grupo}>
             <label
               htmlFor="usuario"
               style={styles.label}
+=======
+          <div className="crear-usuario-group">
+            <label
+              htmlFor="usuario"
+              className="crear-usuario-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             >
               Usuario
             </label>
 
+<<<<<<< HEAD
             <div style={styles.inputContenedor}>
               <span style={styles.inputIcono}>🎟️</span>
+=======
+            <div className="crear-usuario-input-icono">
+              <span>🎟️</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
               <input
                 id="usuario"
@@ -212,22 +288,39 @@ export default function CrearUsuarioPage() {
                 placeholder="Elija un nombre de usuario"
                 value={formulario.usuario}
                 onChange={handleChange}
+<<<<<<< HEAD
                 style={styles.input}
+=======
+                className="crear-usuario-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               />
             </div>
           </div>
 
+<<<<<<< HEAD
           <div style={styles.fila}>
             <div style={styles.grupo}>
               <label
                 htmlFor="password"
                 style={styles.label}
+=======
+          <div className="crear-usuario-row">
+            <div className="crear-usuario-group">
+              <label
+                htmlFor="password"
+                className="crear-usuario-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Contraseña
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>🔒</span>
+=======
+              <div className="crear-usuario-input-icono">
+                <span>🔒</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="password"
@@ -236,21 +329,37 @@ export default function CrearUsuarioPage() {
                   placeholder="Ingrese una contraseña"
                   value={formulario.password}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="crear-usuario-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
 
+<<<<<<< HEAD
             <div style={styles.grupo}>
               <label
                 htmlFor="confirmar"
                 style={styles.label}
+=======
+            <div className="crear-usuario-group">
+              <label
+                htmlFor="confirmar"
+                className="crear-usuario-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Confirmar contraseña
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>🔐</span>
+=======
+              <div className="crear-usuario-input-icono">
+                <span>🔐</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="confirmar"
@@ -259,38 +368,64 @@ export default function CrearUsuarioPage() {
                   placeholder="Repita la contraseña"
                   value={formulario.confirmar}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="crear-usuario-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
           </div>
 
           {error && (
+<<<<<<< HEAD
             <div style={styles.error}>
+=======
+            <div className="crear-usuario-error">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               ⚠️ {error}
             </div>
           )}
 
           {mensaje && (
+<<<<<<< HEAD
             <div style={styles.exito}>
+=======
+            <div className="crear-usuario-exito">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               ✅ {mensaje}
             </div>
           )}
 
           <button
             type="submit"
+<<<<<<< HEAD
             style={styles.boton}
           >
             Crear usuario
           </button>
 
           <p style={styles.textoCuenta}>
+=======
+            className="crear-usuario-boton"
+            disabled={isLoading}
+          >
+            {isLoading ? '⏳ Cargando...' : '🚀 Crear usuario'}
+          </button>
+
+          <p className="crear-usuario-texto-cuenta">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             ¿Ya tienes una cuenta?
           </p>
 
           <Link
             href="/loggin"
+<<<<<<< HEAD
             style={styles.volver}
+=======
+            className="crear-usuario-volver"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
           >
             ← Volver al inicio de sesión
           </Link>
@@ -298,6 +433,7 @@ export default function CrearUsuarioPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
 const styles: Record<string, React.CSSProperties> = {
@@ -467,3 +603,6 @@ const styles: Record<string, React.CSSProperties> = {
     textDecoration: 'none',
   },
 };
+=======
+}
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e

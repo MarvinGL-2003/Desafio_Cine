@@ -36,17 +36,10 @@ const asientosSlice = createSlice({
   name: 'asientos',
   initialState,
   reducers: {
-    reservarAsientos: (state, action: PayloadAction<string[]>) => {
-      state.asientos = state.asientos.map(asiento =>
-        action.payload.includes(asiento.id) && asiento.estado === 'Disponible'
-          ? { ...asiento, estado: 'Reservado' }
-          : asiento
-      );
-    },
-
+    // 👇 Función para liberar asientos (disponibles nuevamente)
     liberarAsientos: (state, action: PayloadAction<string[]>) => {
       state.asientos = state.asientos.map(asiento =>
-        action.payload.includes(asiento.id)
+        action.payload.includes(asiento.id) && asiento.estado === 'Reservado'
           ? { ...asiento, estado: 'Disponible' }
           : asiento
       );
@@ -54,5 +47,6 @@ const asientosSlice = createSlice({
   },
 });
 
-export const { reservarAsientos, liberarAsientos } = asientosSlice.actions;
+// 👇 EXPORTAR liberarAsientos
+export const { liberarAsientos } = asientosSlice.actions;
 export default asientosSlice.reducer;

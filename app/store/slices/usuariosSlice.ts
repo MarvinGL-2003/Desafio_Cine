@@ -6,8 +6,22 @@ interface UsuariosState {
   usuarioActual: Usuario | null;
 }
 
+<<<<<<< HEAD
 const initialState: UsuariosState = {
   usuarios: [],
+=======
+// Usuario administrador predefinido
+const usuarioAdmin: Usuario = {
+  id: "admin-001",
+  nombre: "Administrador",
+  correo: "admin@cineapp.com",
+  usuario: "admin",
+  password: "123456",
+};
+
+const initialState: UsuariosState = {
+  usuarios: [usuarioAdmin],  // 👈 Usuario admin predefinido
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
   usuarioActual: null,
 };
 

@@ -28,6 +28,10 @@ export default function LoginPage() {
   });
 
   const [error, setError] = useState('');
+<<<<<<< HEAD
+=======
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -56,6 +60,11 @@ export default function LoginPage() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+    setIsLoading(true);
+
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
     const usuarioEncontrado = usuarios.find(
       (usuario) =>
         usuario.usuario.toLowerCase() === usuarioLimpio &&
@@ -64,6 +73,10 @@ export default function LoginPage() {
 
     if (!usuarioEncontrado) {
       setError('Usuario o contraseña incorrectos.');
+<<<<<<< HEAD
+=======
+      setIsLoading(false);
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
       return;
     }
 
@@ -72,6 +85,7 @@ export default function LoginPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div style={styles.pagina}>
       <div style={styles.decoracionUno} />
       <div style={styles.decoracionDos} />
@@ -86,12 +100,32 @@ export default function LoginPage() {
             </h2>
 
             <p style={styles.descripcion}>
+=======
+    <div className="auth-page">
+      <div className="auth-decoracion-uno" />
+      <div className="auth-decoracion-dos" />
+
+      <div className="auth-container">
+        <div className="auth-panel-izquierdo">
+          <div>
+            <h1 className="auth-logo">🎬 Cine App</h1>
+
+            <h2 className="auth-titulo-izquierdo">
+              Administra tu cine de una manera fácil
+            </h2>
+
+            <p className="auth-descripcion">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               Gestiona películas, reservas, asientos y ventas
               desde un solo lugar.
             </p>
           </div>
 
+<<<<<<< HEAD
           <div style={styles.lista}>
+=======
+          <div className="auth-lista">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             <p>🎞️ Gestión de películas</p>
             <p>🎫 Control de reservaciones</p>
             <p>💺 Administración de asientos</p>
@@ -99,6 +133,7 @@ export default function LoginPage() {
           </div>
         </div>
 
+<<<<<<< HEAD
         <div style={styles.panelFormulario}>
           <div style={styles.iconoPrincipal}>🎥</div>
 
@@ -107,24 +142,46 @@ export default function LoginPage() {
           </h1>
 
           <p style={styles.subtitulo}>
+=======
+        <div className="auth-panel-formulario">
+          <div className="auth-icono-principal">🎥</div>
+
+          <h1 className="auth-titulo">Bienvenido</h1>
+
+          <p className="auth-subtitulo">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             Inicia sesión para entrar al sistema
           </p>
 
           <form
             onSubmit={iniciarSesion}
             noValidate
+<<<<<<< HEAD
             style={styles.formulario}
           >
             <div style={styles.grupo}>
               <label
                 htmlFor="usuario"
                 style={styles.label}
+=======
+            className="auth-form"
+          >
+            <div className="auth-form-group">
+              <label
+                htmlFor="usuario"
+                className="auth-form-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Usuario
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>👤</span>
+=======
+              <div className="auth-input-icono">
+                <span>👤</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="usuario"
@@ -133,21 +190,37 @@ export default function LoginPage() {
                   placeholder="Ingrese su usuario"
                   value={formulario.usuario}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="auth-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
 
+<<<<<<< HEAD
             <div style={styles.grupo}>
               <label
                 htmlFor="password"
                 style={styles.label}
+=======
+            <div className="auth-form-group">
+              <label
+                htmlFor="password"
+                className="auth-form-label"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               >
                 Contraseña
               </label>
 
+<<<<<<< HEAD
               <div style={styles.inputContenedor}>
                 <span style={styles.inputIcono}>🔒</span>
+=======
+              <div className="auth-input-icono">
+                <span>🔒</span>
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
 
                 <input
                   id="password"
@@ -156,19 +229,28 @@ export default function LoginPage() {
                   placeholder="Ingrese su contraseña"
                   value={formulario.password}
                   onChange={handleChange}
+<<<<<<< HEAD
                   style={styles.input}
+=======
+                  className="auth-input"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 />
               </div>
             </div>
 
             {error && (
+<<<<<<< HEAD
               <div style={styles.error}>
+=======
+              <div className="auth-error">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
                 ⚠️ {error}
               </div>
             )}
 
             <button
               type="submit"
+<<<<<<< HEAD
               style={styles.boton}
             >
               Iniciar sesión
@@ -181,12 +263,31 @@ export default function LoginPage() {
             </div>
 
             <p style={styles.textoRegistro}>
+=======
+              className="auth-boton"
+              disabled={isLoading}
+            >
+              {isLoading ? '⏳ Cargando...' : '🚀 Iniciar sesión'}
+            </button>
+
+            <div className="auth-separador">
+              <span className="auth-separador-linea" />
+              <span>o</span>
+              <span className="auth-separador-linea" />
+            </div>
+
+            <p className="auth-texto-registro">
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
               ¿Todavía no tienes una cuenta?
             </p>
 
             <Link
               href="/crear_usuario"
+<<<<<<< HEAD
               style={styles.botonSecundario}
+=======
+              className="auth-boton-secundario"
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e
             >
               Crear una cuenta
             </Link>
@@ -195,6 +296,7 @@ export default function LoginPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
 const styles: Record<string, React.CSSProperties> = {
@@ -410,3 +512,6 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 700,
   },
 };
+=======
+}
+>>>>>>> 42eaf552ff54b0b7b5a42d8265e0aa8a799c890e

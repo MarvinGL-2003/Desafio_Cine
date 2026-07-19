@@ -10,7 +10,7 @@ interface PeliculasState {
   filtroEstado: string;
 }
 
-// 10 películas de ejemplo
+// 10 películas de ejemplo con clasificaciones en español
 const peliculasEjemplo: Pelicula[] = [
   {
     id: 'P001',
@@ -18,7 +18,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Avengers: Endgame',
     genero: 'Acción',
     duracion: 181,
-    clasificacion: 'PG-13',
+    clasificacion: 'Adolescentes',
     sala: 'Sala 1',
     precio: 12.50,
     estado: 'Disponible',
@@ -29,7 +29,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'El Rey León',
     genero: 'Animación',
     duracion: 118,
-    clasificacion: 'PG',
+    clasificacion: 'Infantil',
     sala: 'Sala 2',
     precio: 10.00,
     estado: 'Disponible',
@@ -40,7 +40,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Interestelar',
     genero: 'Ciencia Ficción',
     duracion: 169,
-    clasificacion: 'PG-13',
+    clasificacion: 'Adolescentes',
     sala: 'Sala 3',
     precio: 14.00,
     estado: 'Disponible',
@@ -51,7 +51,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Titanic',
     genero: 'Drama',
     duracion: 195,
-    clasificacion: 'PG-13',
+    clasificacion: 'Adolescentes',
     sala: 'Sala 1',
     precio: 11.00,
     estado: 'Disponible',
@@ -62,7 +62,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'El Conjuro',
     genero: 'Terror',
     duracion: 112,
-    clasificacion: 'R',
+    clasificacion: 'Adultos',
     sala: 'Sala 2',
     precio: 9.50,
     estado: 'Disponible',
@@ -73,7 +73,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Toy Story 4',
     genero: 'Animación',
     duracion: 100,
-    clasificacion: 'G',
+    clasificacion: 'Infantil',
     sala: 'Sala 3',
     precio: 8.50,
     estado: 'No disponible',
@@ -84,7 +84,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'El Padrino',
     genero: 'Drama',
     duracion: 175,
-    clasificacion: 'R',
+    clasificacion: 'Adultos',
     sala: 'Sala 1',
     precio: 13.00,
     estado: 'Disponible',
@@ -95,7 +95,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Matrix',
     genero: 'Ciencia Ficción',
     duracion: 136,
-    clasificacion: 'R',
+    clasificacion: 'Adolescentes',
     sala: 'Sala 2',
     precio: 11.50,
     estado: 'Disponible',
@@ -106,7 +106,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Mi Pobre Angelito',
     genero: 'Comedia',
     duracion: 103,
-    clasificacion: 'PG',
+    clasificacion: 'Todos',
     sala: 'Sala 3',
     precio: 8.00,
     estado: 'Disponible',
@@ -117,7 +117,7 @@ const peliculasEjemplo: Pelicula[] = [
     nombre: 'Dune',
     genero: 'Ciencia Ficción',
     duracion: 155,
-    clasificacion: 'PG-13',
+    clasificacion: 'Adolescentes',
     sala: 'Sala 1',
     precio: 15.00,
     estado: 'Disponible',
@@ -143,6 +143,12 @@ const peliculasSlice = createSlice({
         alert('❌ Ya existe una película con ese código');
         return;
       }
+      
+      if (action.payload.precio <= 0) {
+        alert('❌ El precio debe ser mayor a 0');
+        return;
+      }
+      
       state.peliculas.push(action.payload);
     },
 
@@ -156,6 +162,12 @@ const peliculasSlice = createSlice({
           alert('❌ Ya existe una película con ese código');
           return;
         }
+        
+        if (action.payload.precio <= 0) {
+          alert('❌ El precio debe ser mayor a 0');
+          return;
+        }
+        
         state.peliculas[index] = action.payload;
       }
     },
